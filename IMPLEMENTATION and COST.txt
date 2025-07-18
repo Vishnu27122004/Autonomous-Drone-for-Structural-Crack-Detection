@@ -1,0 +1,136 @@
+IMPLEMENTATION
+
+COMPONENTS SPECIFICATION
+Components :
+1.  Frames :
+a. Material: Glass Fiber + Polyamide Nylon Wheelbase 500mm
+b. Weight :405g
+c. Arm Size (L x W) 220 x 40mm
+d. Motor Mount Hole Dia. 3mm
+e. Landing Gear Material : ABS Plastic
+f. Landing Gear Height : 200mm
+g. Landing Gear Color : Black
+h. Landing Gear Weight : 75g
+i. Shipping Weight : 0.49kg ,	Shipping Dimensions : 30 × 20 × 7 cm
+
+
+2.  Motors :
+a. Model : A2212 10T
+b. Motor KV 1400 RPM/V
+c. Compatible LiPO Batteries : 2S ~ 3S
+d. Shaft Diameter : 3.17mm
+e. Current Handling Capacity : 16A
+f. Max.Efficiency Current : 6 ~ 12A
+g. No-Load Current : 700mA
+h. Maximum Efficiency : 80%
+i. Length : 27.5mm , Weight : 72g
+j. Width : 27mm
+k. Shipping Weight : 0.078kg
+l. Shipping Dimensions : 12 × 6 × 5cm
+
+3. Propellers :
+a. Material : Carbon Fiber
+b. Color : Black
+c. No. of Blades : 2
+d. Length : 8 Inch
+e. Pitch : 4.5 inch
+f. Shaft Diameter : 8mm
+g. Total Length : 204mm
+h. Plastic Reducers : 3,4,5,6
+i. Weight : 18g
+j. Shipping Weight : 0.02kg
+k. Shipping Dimensions : 24×4×1cm
+
+
+4.  ESC :
+a. Model : ReadytoSky 40A
+b. Burst Current : 60A
+c. Constant Current : 40A
+d. BEC : Yes (5V/3A)Suitable
+e. Lipo Batteries : 2 ~ 4S
+f. Color: Black
+g. Dimensions (LxWxH) : 7 × 3 mm
+h. Weight : 3 g
+i. Application : BLDC Motors, Multirotors, Rc Planes etc.
+j. Shipping Weight : 0.037 kg
+k. Shipping Dimensions : 5 × 2 × 1 cm
+
+5.  Flight control :
+a. Model : Omnibus F4 V2 PRO
+b. Firmware Beta Flight
+c. 3.1.7_OMNIBUSF4SD Sensor
+d. Barometer: BMP280
+e. Built-in Current Sensor
+f. MPU6000 Processor
+g. SCM: STM32-F405 RGT6
+h. Micro-SD Card Slot	Yes
+i. Dimensions (LxWxH) mm : 37 x 37 x 5
+j. Weight (g) : 18g
+k. Shipping Weight : 0.02 kg
+l. Shipping Dimensions : 6 × 4 × 1 cm
+
+
+6.  Transmitter and Receiver :
+a. Operating Voltage (VDC) : 6
+b. Antenna Length (mm) : 26
+c. Certificate CE0678, FCC Charging Port No
+d. Code Type Digital
+e. DSC Port PS/2 Port PPM, Yes
+f. Low Voltage Warning On <4.2V
+g. Model Type : Digital Radio Trans receiver Modulation Type : GFSK
+h. No. of Channels Receiver: 10	Transmitter: 6
+i. RF Power < 20dBm
+j. Default Operating Mode 2 (Left-Hand Throttle)
+k. Band-Range (GHz) : 2.40 ~ 2.48
+l. Bandwidth (KHz) : 500
+m. UPC 696392291586
+n. Dimensions (LxWxH) mm : 74 x 89 x 190
+o. Weight (g) : 392	Shipping Weight :0.75 kg	Shipping Dimensions : 25 × 25 × 8 cm
+
+7.  Battery :
+a. Model No. ORANGE 6200/4S-35C
+b. Capacity (mAh) : 6200
+c. Output Voltage (VDC) :14.8
+d. Charge Rate (C) : 1 ~ 3
+e. Discharge Plug XT-60 Female
+f. Balance Plug JST-XH
+g. Max. Burst Discharge (C) : 70C (220A for 10Sec)
+h. Max. Charge Rate 5 C
+i. Max. Continuous Discharge 35C (110A)
+j. Length (mm) : 167
+k. Width (mm) : 35
+l. Height (mm) : 50	Weight (g) : 630
+m. Shipping Weight : 0.7 kg	Shipping Dimensions : 20 × 8 × 5 cm
+
+
+8. Camera :
+a. Horizontal Resolution (TVL) 1000
+b. Image Sensor CMOS 3.6mm Lens
+c. Minimum Illumination 0.000 LUX x F1.2(IR LED ON)
+d. Operating Temperature (°C) : -10 to 50
+e. Operating Voltage (VDC) : 6 ~ 12
+f. Pixel Resolution	: 1280 x 720
+g. Input Voltage (VDC) :12
+h. S/N Ratio (dB)	48
+i. Video Output 1.0Vp – P75?.
+j. Working Current :135±5 mA.
+k. Dimensions (LxWxH) mm : 36 x 36 x 22
+l. Weight (g) : 20
+m. Shipping Weight : 0.022 kg	Shipping Dimensions : 5 × 3 × 1 cm
+
+ESTIMATED COST :-
+
+
+1. Frames : ? 2,369.00
+2. Motors : ? 375.00
+3. Propellers : ? 599.0
+4. ESC : ? 916.00
+5. Flight Controler : ? 3,169.00
+6. Transister and Reciever : ? 4,699.00
+7. Battery : ? 4,299.00
+8. Camera : ? 3,699.00
+
+
+
+TOTALAPPROX COST : ? 20,000 - ? 20,500
+

@@ -1,0 +1,88 @@
+Python code
+
+import cv2
+import numpy as np
+import math
+import requests
+from PIL import Image, ImageTk
+import tkinter as tk
+import threading
+URL = "http://192.168.93.227/capture"
+Distance = 0.001 
+
+window = tk.Tk()
+window.title("Crack Detection Monitor")
+window.geometry("700x540")
+window.configure(bg="#1f1f2e")
+label = tk.Label(window, bg="#1f1f2e")
+label.pack(pady=10)
+running = True
+
+def calculate_angle(p1, p2):
+    dx = p2[0] - p1[0]
+    dy = p2[1] - p1[1]
+    return math.degrees(math.atan2(dy, dx))
+
+def crack_probability(area_ratio):
+    return min(max(int(area_ratio * 80000), 1), 100)
+
+def process_frame():
+    global running
+    while running:
+        try:
+            response = requests.get(URL, timeout=2)
+            img_arr = np.asarray(bytearray(response.content), dtype=np.uint8)
+            frame = cv2.imdecode(img_arr, cv2.IMREAD_COLOR)
+            frame = cv2.resize(frame, (640, 480))
+
+            gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+            blurred = cv2.GaussianBlur(gray, (7, 7), 0)
+            edges = cv2.Canny(blurred, 30, 100)
+            contours, _ = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+            if contours:
+                crack = max(contours, key=cv2.contourArea)
+                x, y, w, h = cv2.boundingRect(crack)
+                cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
+
+                max_dist, pt1, pt2 = 0, (0, 0), (0, 0)
+                for i in range(len(crack)):
+                    for j in range(i + 1, len(crack)):
+                        a = tuple(crack[i][0])
+                        b = tuple(crack[j][0])
+                        dist = np.linalg.norm(np.array(a) - np.array(b))
+                        if dist > max_dist:
+                            max_dist, pt1, pt2 = dist, a, b
+
+                angle = calculate_angle(pt1, pt2)
+                length_m = max_dist * Distance
+                width_m = w * Distance
+                area_ratio = cv2.contourArea(crack) / (frame.shape[0] * frame.shape[1])
+                probability = crack_probability(area_ratio)
+
+                # Draw overlay text
+                cv2.putText(frame, f"Crack Probability: {probability:.0f}%", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,0), 2)
+                #cv2.putText(frame, f"angle= {angle:.1f}", (10, 60), 
+cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255,0,0), 2)
+                cv2.putText(frame, f"L= {length_m*100:.2f} cm", (10, 90), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255,0,0), 2)
+                cv2.putText(frame, f"W= {width_m*100} cm", (10, 120), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255,0,0), 2)
+
+            # Show in Tkinter
+            frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            img = Image.fromarray(frame)
+            imgtk = ImageTk.PhotoImage(image=img)
+            label.imgtk = imgtk
+            label.configure(image=imgtk)
+
+        except Exception as e:
+            print("Error:", e)
+
+def on_close():
+    global running
+    running = False
+    window.destroy()
+
+threading.Thread(target=process_frame, daemon=True).start()
+window.protocol("WM_DELETE_WINDOW", on_close)
+window.mainloop()
+
