@@ -25,10 +25,5 @@ A drone-based system developed to **autonomously detect structural cracks** in b
 - Trained CNN model file: `models/cnn_model.h5` (if included)
 - Requirements: `pip install -r requirements.txt`
 
-## 📄 Project Report
-Check the full technical report in [`report/FINAL_REPORT.pdf`](report/FINAL_REPORT.pdf).
-
----
-
 > 👨‍🔧 Developed by a 10-member interdisciplinary team from Aeronautical, ECE, and CS departments. 
 # Autonomous-Drone-for-Structural-Crack-Detection
