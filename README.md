@@ -15,10 +15,7 @@ A drone-based system developed to **autonomously detect structural cracks** in b
 - **Programming**: Python, OpenCV, C++
 - **Flight Control**: ArduPilot / PX4
 - **Machine Learning**: TensorFlow (for CNN crack classification)
-- **Visualization & Reporting**: Web dashboard, optional Power BI
-
-## 📷 System Architecture
-![Drone Setup](images/drone_setup.jpg)
+- **Visualization & Reporting**: Web dashboard, optional Power B
 
 ## 💻 Code Usage
 - Run `image_processing/crack_detection.py` to start crack detection using a webcam or IP camera.
