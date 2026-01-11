@@ -1,0 +1,41 @@
+# Byte-compiled / optimized
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+env/
+venv/
+ENV/
+build/
+dist/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Data & Models
+*.h5
+*.pkl
+*.pth
+*.onnx
+data/raw/
+models/trained_models/
+
+# Logs
+*.log
+logs/
+
+# OS
+Thumbs.db
+.AppleDouble
+
+# Environment
+.env
+.env.local
